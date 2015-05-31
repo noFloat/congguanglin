@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="gMSvLHvnWi">
+    <meta name="keywords" content="Toruneko,特鲁尼克,戴建豪,PHP,Java,设计模式,Windows Phone,C#">
+    <meta name="description" content="戴建豪(Toruneko)的博客.">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/blog.css">
+<title>the last battel</title>
+    <link rel="shortcut icon" href="http://toruneko.sinaapp.com/favicon.ico" type="image/x-icon">
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://toruneko.sinaapp.com/assets/js/html5shiv.min.js"></script>
+	<script type="text/javascript" src="http://toruneko.sinaapp.com/assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Toruneko</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<!-- <li><a href="http://www.toruneko.net/">Home</a></li> -->
+					<li class="active"><a href="__URL__/index">Blog</a></li>
+					<li class="active"><a href="__URL__/uploading">上传</a></li>
+					<li class="active"><a href="__URL__/userunset">注销</a></li>
+                    <li><a href="http://123.57.74.156:88/" target="_blank"></a></li>
+					
+				</ul>
+				<form action="http://blog.toruneko.net/search" class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input name="kw" class="form-control" placeholder="关键字" type="text">
+					</div>
+					<button type="submit" class="btn btn-default">搜索</button>
+				</form>
+			</div>
+		</div>
+	</div>
+<volist name="content" id="list">
+    <div class="container-fluid blog-container">
+	    <div class="row">
+			<div class="col-md-9 blog-container-list">
+				<div class="page-header">
+					<h2><a href="__URL__/articleshow/?page={$list.id}">{$list.kind}</a></h2>
+				</div>
+				<div class="panel">
+					<div class="panel-body">{$list.content}</div>
+					<div class="panel-footer">
+						创建于：{$list.time}		By {$list.user_name}
+					</div>
+				</div>
+				</div>
+		</div>
+	</div>
+</volist>
+					<ul id="yw1" class="pagination">
+						<li class=" active">{$page}</li>
+					</ul>	
+<script src=""></script><script type="text/javascript" src=""></script>
+<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/blog.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var offset = 20;
+
+var current = window.location.href;
+$('.nav li').each(function(){
+    var href = $(this).find('a').attr('href');
+    if(href == current){
+        $('.nav li.active').removeClass('active');
+        $(this).addClass('active');
+    }else if(current.match('^'+href+'.*')){
+        $('.nav li.active').removeClass('active');
+        $(this).addClass('active');
+    }
+});
+
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e259f8f91c0fa95b00c128e2cb9c9503";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+/*]]>*/
+</script>
+
+
+</body></html>
